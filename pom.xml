@@ -1,0 +1,31 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.example</groupId>
+    <artifactId>sonar-scanner-project</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>SonarQube Scanner Project</name>
+    
+    <properties>
+        <sonar.host.url>http://10.0.2.15:9000</sonar.host.url>
+        <sonar.language>py</sonar.language>
+        <sonar.sources>ImgRecogonization_Module.py, Realtimedetection.py, Training.py, seg.py</sonar.sources>
+    </properties>
+    
+    <dependencies>
+        <!-- No specific dependencies needed for SonarQube scanning -->
+    </dependencies>
+    
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>3.7.0.1746</version>
+            </plugin>
+        </plugins>
+    </build>
+</project>
